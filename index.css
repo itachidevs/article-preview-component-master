@@ -1,0 +1,195 @@
+:root {
+    --button: hsl(212, 23%, 69%);
+    --heading: hsl(217, 19%, 35%);
+    --description: hsl(214, 17%, 51%);
+    --background: hsl(210, 46%, 95%);
+
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--background);
+    padding: 40px;
+    height: 100vh;
+}
+
+.card {
+    height: fit-content;
+    width: 300px;
+    display: flex;
+    flex-direction: column;
+
+}
+
+.header-img {
+    height: 33%;
+    border-top-left-radius: 0.5em;
+    border-top-right-radius: 0.5em;
+
+}
+
+.content-container {
+    height: 75%;
+    font-family: "Manrope";
+    padding: 1rem;
+    background-color: white;
+    border-bottom-left-radius: 0.5em;
+    border-bottom-right-radius: 0.5em;
+
+}
+
+.content-container-heading {
+    font-family: "Manrope";
+    font-weight: 700;
+    font-size: 1em;
+    color: var(--heading);
+    margin-bottom: 1em;
+}
+
+.content-container-description {
+    font-size: 0.8em;
+    font-family: "Manrope";
+    margin-bottom: 1em;
+    color: var(--description);
+}
+
+.profile-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+}
+
+.profile {
+    height: auto;
+    display: flex;
+    align-items: center;
+    gap: 1em;
+}
+
+.profile-img {
+    width: 20%;
+    border-radius: 50%;
+}
+
+.name,
+.date {
+    font-size: 0.7em;
+}
+
+.share-btn {
+    background-color: var(--background);
+    width: 30px;
+    height: 30px;
+    border-width: 0px;
+    border-radius: 50%;
+    cursor: pointer;
+}
+
+.footer {
+    background-color: var(--heading);
+    border-bottom-left-radius: 0.5em;
+    border-bottom-right-radius: 0.5em;
+    padding: 1em;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    display: none;
+}
+
+.showFooter {
+    display: flex;
+    opacity: 1;
+}
+
+.share {
+    font-family: "Manrope";
+    color: var(--description);
+    font-weight: 500;
+    font-size: 0.8em;
+    letter-spacing: 0.5em;
+}
+
+.footer-btn {
+    background-color: var(--description);
+
+}
+
+.hideProfile {
+    display: none;
+}
+
+.share-btn-desktop {
+
+    display: none;
+}
+
+.footer-desktop {
+    display: none;
+}
+
+@media screen and (min-width:768px) {
+    .card {
+        display: flex;
+        flex-direction: row;
+    }
+
+    .card {
+        width: 600px;
+        height: fit-content;
+    }
+
+    .header-img {
+        width: 50%;
+    }
+
+    .content-container {
+        width: 50%;
+    }
+
+    .footer {
+        display: none;
+    }
+
+    .footer-desktop {
+
+        visibility: hidden;
+        width: fit-content;
+        background-color: var(--heading);
+        padding: 20px;
+        position: absolute;
+        display: flex;
+        z-index: 1;
+        bottom: 42%;
+        left: 50%;
+        margin-left: 200px;
+        gap: 1em;
+    }
+
+    .share-btn {
+        display: none;
+    }
+
+    .share-btn-desktop {
+        background-color: var(--background);
+        width: 30px;
+        height: 30px;
+        border-width: 0px;
+        border-radius: 50%;
+        cursor: pointer;
+        display: inline-block;
+    }
+
+    .show-pop-up {
+        visibility: visible;
+    }
+
+
+}
